@@ -1,0 +1,53 @@
+export const topMeels=[
+    {
+        image:"https://cdn.pixabay.com/photo/2021/02/08/18/27/pizza-5995982_1280.jpg",
+        title:"Pizza"
+    },
+    {
+        image:"https://cdn.pixabay.com/photo/2022/07/15/18/16/beef-burger-7323692_1280.jpg",
+        title:"Burger"
+    },
+    {
+        image:"https://cdn.pixabay.com/photo/2017/10/27/12/02/dessert-2894066_1280.jpg",
+        title:"Cake"
+    }
+    ,
+    {
+        image:"https://cdn.pixabay.com/photo/2015/04/10/16/01/sushi-716458_1280.jpg",
+        title:"Sushi"
+    }
+    ,
+    {
+        image:"https://cdn.pixabay.com/photo/2022/07/15/18/41/ukrainian-food-7323773_1280.jpg",
+        title:'Borsch'
+    }
+    ,
+    {
+        image:"https://cdn.pixabay.com/photo/2021/01/06/10/11/shawarma-5893935_1280.jpg",
+        title:"Shaurma"
+    }
+    ,
+    {
+        image:"https://cdn.pixabay.com/photo/2014/04/22/02/55/pasta-329522_1280.jpg",
+        title:"Pasta"
+    }
+    ,
+    {
+        image:"https://images.pexels.com/photos/2313686/pexels-photo-2313686.jpeg?auto=compress&cs=tinysrgb&w=600",
+        title:"Chiken"
+    },
+    {
+        image:"https://cdn.pixabay.com/photo/2022/08/31/12/37/steak-7423225_1280.jpg",
+        title:"Steak"
+    },
+    {
+        image:"https://cdn.pixabay.com/photo/2017/01/11/19/57/salad-1972745_1280.jpg",
+        title:"Salad"
+    },
+    {
+        image:"https://cdn.pixabay.com/photo/2021/01/10/04/38/rice-5904095_1280.jpg",
+        title:"Plov"
+    },
+
+
+]
