@@ -6,6 +6,8 @@ import { lightTheme } from "./Theme/LightTheme";
 import Home from "./component/Home/Home";
 import RestaurantDetails from "./component/Restaurant/RestaurantDetails";
 import Cart from "./component/Cart/Cart";
+import Profile from "./component/Profile/Profile";
+import { CustomerRoute } from "./Routes/CustomerRoute";
 
 function App() {
   return (
@@ -13,13 +15,15 @@ function App() {
 
       <CssBaseline />
 
-      <Navbar />
+       {/* <Navbar /> 
 
-       <Home />
+        <Home />
 
-      <RestaurantDetails />
+      <RestaurantDetails /> */}
 
-      <Cart />
+      {/* <Cart /> */}
+      
+       <CustomerRoute/> 
 
     </ThemeProvider>
   );

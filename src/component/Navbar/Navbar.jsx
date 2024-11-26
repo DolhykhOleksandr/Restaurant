@@ -1,17 +1,18 @@
 import React from "react";
-import { IconButton, Box, Typography } from "@mui/material";
+import { IconButton, Box, Typography, Avatar } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import Person2Icon from "@mui/icons-material/Person2";
 import "./Navbar.css";
+import { Person } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+  const navigate=useNavigate()
   return (
-    <div
-      className="navbar px-5 z-50 py-[.8rem] lg:px-20 flex justify-between"
-      style={{ backgroundColor: "#f6c946" }}
-    >
+  <Box>
+    <div className=" sticky px-5  top-0 z-[50] py-[.8rem] lg:px-20 flex justify-between">
       <div className="lg:mr-10 cursor-pointer flex items-center space-x-4">
         <Box display="flex" alignItems="center">
           <Typography
@@ -22,7 +23,7 @@ export const Navbar = () => {
               fontFamily: "Arial, sans-serif",
             }}
           >
-            DailyDelivery
+            DailyDelivery 
           </Typography>
           <PinDropIcon
             sx={{
@@ -41,8 +42,16 @@ export const Navbar = () => {
           </IconButton>
         </div>
         <div>
-          <IconButton>
-            <Person2Icon sx={{ fontSize: "2.2rem", color: "#34a853" }} />
+          <IconButton onClick={()=>navigate("/account/login")}>
+            {false ? (
+              <Avatar
+                sx={{ bgcolor: "white", fontSize: "2.2rem", color: "#34a853" }}
+              >
+                C
+              </Avatar>
+            ) : (
+              <Person sx={{ fontSize: "2.2rem", color: "#34a853" }} />
+            )}
           </IconButton>
         </div>
 
@@ -53,5 +62,6 @@ export const Navbar = () => {
         </div>
       </div>
     </div>
+    </Box>
   );
 };
