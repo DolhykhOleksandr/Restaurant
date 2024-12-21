@@ -9,6 +9,8 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { AddReaction } from "@mui/icons-material";
 import { Divider, Drawer, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../State/Authentication/Action";
 
 const menu = [
   { title: "Orders", icon: <ShoppingBagIcon /> },
@@ -20,11 +22,19 @@ const menu = [
   { title: "Logout", icon: <LogoutIcon /> },
 ];
 export const ProfileNavigation = ({ open, handleClose }) => {
-  const isSmallScreen = useMediaQuery("(max-width:900px)");
+  const isSmallScreen = useMediaQuery("(max-width:800px)");
   const navigate=useNavigate();
-  const handleNavigate=(item)=>{navigate(`/my-profile/${item.title.toLowerCase()}`)
-    
-  }
+  const dispatch=useDispatch();
+
+  const handleNavigate = (item) => {
+    if (item.title === "Logout") {
+      dispatch(logout());
+      navigate("/")
+    } else {
+      navigate(`/my-profile/${item.title.toLowerCase()}`);
+    }
+  };
+  
 
   return (
     <div>
@@ -36,8 +46,8 @@ export const ProfileNavigation = ({ open, handleClose }) => {
         sx={{ zIndex: -1, position: "sticky" }}
       >
         <div
-          className="w-[50vw] lg:w-[20vw] h-[100vh] flex flex-col
-            justify-center text-xl pt-16 gap-10"
+          className="w-[50vw] lg:w-[21vw] h-[100vh] flex flex-col
+            justify-center text-xl pt-16 gap-8"
         >
           {menu.map((item, i) => (
             <>

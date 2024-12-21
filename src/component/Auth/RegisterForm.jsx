@@ -13,9 +13,11 @@ import {
 import { Field, Form, Formik } from "formik";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "../State/Authentication/Action";
+import { useDispatch } from "react-redux";
 
 const initialValues = {
-  fullname: "",
+  fullName: "",
   email: "",
   password: "",
   role: "",
@@ -27,8 +29,11 @@ export const RegisterForm = () => {
     setShowPassword((prev) => !prev);
   };
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleSubmit = (values) => {
     console.log("form values", values);
+    dispatch(registerUser({ userData: values, navigate }));
   };
   return (
     <div>
@@ -40,7 +45,7 @@ export const RegisterForm = () => {
         <Form>
           <Field
             as={TextField}
-            name="fullname"
+            name="fullName"
             label="full name"
             fullWidth
             variant="outlined"
@@ -71,6 +76,7 @@ export const RegisterForm = () => {
             fullWidth
             variant="outlined"
             margin="normal"
+            type="email"
           />
           <FormControl fullWidth margin="normal">
             <InputLabel id="role-simple-select-label">Role</InputLabel>

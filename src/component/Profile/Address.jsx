@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Address = () => {
   return (
-    <div>Address</div>
+    <div className='flex flex-wrap gap-3 justify-center'>Address</div>
   )
 }
