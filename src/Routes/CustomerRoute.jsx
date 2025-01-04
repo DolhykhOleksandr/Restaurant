@@ -7,6 +7,8 @@ import Cart from '../component/Cart/Cart'
 import Profile from '../component/Profile/Profile'
 import { Auth } from '../component/Auth/Auth'
 import { PaymentSuccess } from '../component/PaymentSuccess/PaymentSuccess'
+import CreateRestaurantForm from '../AdminComponent/CreateRestaurantForm/CreateRestaurantForm'
+import AddMenuForm from '../AdminComponent/Menu/AddMenuForm'
 
 export const CustomerRoute = () => {
   return (
@@ -19,6 +21,7 @@ export const CustomerRoute = () => {
 <Route path='/cart' element={<Cart/>}/>
 <Route path='/my-profile/*' element={<Profile/>}/>
 <Route path='/payment/success/:id' element={<PaymentSuccess/>}/>
+
 </Routes>
 <Auth/>
 
